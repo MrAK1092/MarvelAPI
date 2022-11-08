@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/comics"
+        android:icon="@drawable/comics"
+        android:title="@string/navigation_comics"
+        android:orderInCategory="1"/>
+
+    <item android:id="@+id/character"
+        android:icon="@drawable/character"
+        android:title="@string/navigation_char"
+        android:orderInCategory="2"/>
+
+    <item android:id="@+id/favorites"
+        android:icon="@drawable/favorites"
+        android:title="@string/navigation_fav"
+        android:orderInCategory="3"/>
+
+</menu>
