@@ -1,10 +1,10 @@
 package data.model
 
 data class Characters(
-    var idCharacter: Int? = null,
-    var nameCharacter: String? = null,
-    var descriptionCharacter: String? = null,
-    var characterURL: String? = null,
-    var imageCharacter: String? = null,
-    var comicsCharacter: String? = null
+    var idCharacter: Int,
+    var nameCharacter: String,
+    var descriptionCharacter: String,
+    var characterURL: String,
+    var imageCharacter: String,
+    var comicsCharacter: String
 )
