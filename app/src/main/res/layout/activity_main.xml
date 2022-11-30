@@ -35,7 +35,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:backgroundTint="@color/black"
-        app:itemIconTint="@drawable/selector"
+        app:itemIconTint="@drawable/selector_menu_items"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
