@@ -1,62 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/mainRootFragment">
+    app:startDestination="@id/mainFragment">
     <fragment
-        android:id="@+id/mainRootFragment"
-        android:name="ui.main.MainRootFragment"
-        android:label="MainRootFragment" >
+        android:id="@+id/mainFragment"
+        android:name="ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
         <action
-            android:id="@+id/action_mainRootFragment_to_comicsFlowFragment"
-            app:destination="@id/comicsFlowFragment" />
+            android:id="@+id/action_mainFragment_to_comicsFragment"
+            app:destination="@id/comicsFragment" />
         <action
-            android:id="@+id/action_mainRootFragment_to_charactersFlowFragment"
-            app:destination="@id/charactersFlowFragment" />
+            android:id="@+id/action_mainFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
         <action
-            android:id="@+id/action_mainRootFragment_to_favoritesFlowFragment"
-            app:destination="@id/favoritesFlowFragment" />
+            android:id="@+id/action_mainFragment_to_charactersFragment"
+            app:destination="@id/charactersFragment" />
     </fragment>
     <fragment
-        android:id="@+id/comicsFlowFragment"
-        android:name="ui.comics.ComicsFlowFragment"
-        android:label="ComicsFlowFragment" >
-        <action
-            android:id="@+id/action_comicsFlowFragment_to_charactersFlowFragment"
-            app:destination="@id/charactersFlowFragment" />
-        <action
-            android:id="@+id/action_comicsFlowFragment_to_favoritesFlowFragment"
-            app:destination="@id/favoritesFlowFragment" />
-        <action
-            android:id="@+id/action_comicsFlowFragment_to_mainRootFragment"
-            app:destination="@id/mainRootFragment" />
-    </fragment>
+        android:id="@+id/comicsFragment"
+        android:name="ui.comics.comics.ComicsFragment"
+        android:label="fragment_comics"
+        tools:layout="@layout/fragment_comics" />
     <fragment
-        android:id="@+id/charactersFlowFragment"
-        android:name="ui.characters.CharactersFlowFragment"
-        android:label="CharactersFlowFragment" >
-        <action
-            android:id="@+id/action_charactersFlowFragment_to_comicsFlowFragment"
-            app:destination="@id/comicsFlowFragment" />
-        <action
-            android:id="@+id/action_charactersFlowFragment_to_favoritesFlowFragment"
-            app:destination="@id/favoritesFlowFragment" />
-        <action
-            android:id="@+id/action_charactersFlowFragment_to_mainRootFragment"
-            app:destination="@id/mainRootFragment" />
-    </fragment>
+        android:id="@+id/charactersFragment"
+        android:name="ui.characters.characters.CharactersFragment"
+        android:label="fragment_characters"
+        tools:layout="@layout/fragment_characters" />
     <fragment
-        android:id="@+id/favoritesFlowFragment"
-        android:name="ui.favorites.FavoritesFlowFragment"
-        android:label="FavoritesFlowFragment" >
-        <action
-            android:id="@+id/action_favoritesFlowFragment_to_charactersFlowFragment"
-            app:destination="@id/charactersFlowFragment" />
-        <action
-            android:id="@+id/action_favoritesFlowFragment_to_comicsFlowFragment"
-            app:destination="@id/comicsFlowFragment" />
-        <action
-            android:id="@+id/action_favoritesFlowFragment_to_mainRootFragment"
-            app:destination="@id/mainRootFragment" />
-    </fragment>
+        android:id="@+id/favoritesFragment"
+        android:name="ui.favorites.favorites.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
 </navigation>

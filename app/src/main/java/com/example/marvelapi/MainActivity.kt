@@ -2,27 +2,44 @@ package com.example.marvelapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.example.marvelapi.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-import ui.ComicsItemFragment
-import ui.PictureFragment
-import ui.main.MainRootFragment
+import ui.comics.comics.ComicsFragment
+import ui.characters.characters.CharactersFragment
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-
-
-    private var mainRootFragment: MainRootFragment? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+    lateinit var binding: ActivityMainBinding
+    override fun onCreate(savedInstanceState: Bundle?){
+        setTheme(R.style.Theme_MarvelAPI)
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        if (savedInstanceState == null) {
-            mainRootFragment = MainRootFragment.newInstance()
-            mainRootFragment?.let {
-                navigator.startNewFlow(it)
-            }
-        }
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.hostFragment) as NavHostFragment
+        var navController = navHostFragment.findNavController()
+
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() ||  super.onSupportNavigateUp()
+    }
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
