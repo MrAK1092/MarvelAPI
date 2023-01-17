@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import com.example.marvelapi.MainActivity
 import com.example.marvelapi.R
 import com.example.marvelapi.databinding.FragmentMainBinding
+import data.model.DataBase
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
@@ -23,6 +25,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val facts = resources.getStringArray(R.array.facts)
+        fun randomFact(){
+            val random = arrayOf(facts)
+            val rand = random.random()
+
+            println(random)
+
+        }
         if (savedInstanceState == null) {
             setupBottomNavigationBar()
         }
