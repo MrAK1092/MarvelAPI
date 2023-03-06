@@ -1,17 +1,12 @@
-package ui.main
+package com.example.marvelapi.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
-import com.example.marvelapi.MainActivity
 import com.example.marvelapi.R
 import com.example.marvelapi.databinding.FragmentMainBinding
-import data.model.DataBase
 
 class MainFragment : Fragment(R.layout.fragment_main) {
 
@@ -54,7 +49,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         navigation_graph.setupWithNavController(
             navGraphIds = navGraphIds,
             fragmentManager = childFragmentManager,
-            containerId = R.id.hostFragment,
+            containerId = R.id.charHostFragment,
             intent = requireActivity().intent
         )
     }

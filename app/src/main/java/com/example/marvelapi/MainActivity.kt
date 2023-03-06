@@ -2,13 +2,14 @@ package com.example.marvelapi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import com.example.marvelapi.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-import data.model.DataBase
-import ui.comics.comics.ComicsFragment
-import ui.characters.characters.CharactersFragment
+import com.example.marvelapi.model.DataBase
+
+import androidx.lifecycle.asLiveData
+
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -30,6 +31,26 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    fun obtainNavHostFragment(
+        fragmentManager: FragmentManager,
+        fragmentTag: String,
+        navGraphId: Int,
+        containerId: Int
+    ): NavHostFragment {
+        val existingFragment =
+            fragmentManager.findFragmentByTag(fragmentTag) as NavHostFragment?
+        existingFragment?.let { return it }
+        val navHostFragment = NavHostFragment.create(navGraphId)
+        fragmentManager.beginTransaction()
+            .add(containerId, navHostFragment, fragmentTag)
+            .commitNow()
+        return navHostFragment
+    }
+
+
+
+
 }
 
 

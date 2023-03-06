@@ -1,4 +1,4 @@
-package data.model
+package com.example.marvelapi.model
 
 import android.content.ClipData
 import android.content.Context

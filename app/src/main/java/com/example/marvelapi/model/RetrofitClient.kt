@@ -1,4 +1,4 @@
-package data.model
+package com.example.marvelapi.model
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

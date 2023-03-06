@@ -1,4 +1,4 @@
-package data.model
+package com.example.marvelapi.model
 
 data class Characters(
     var idCharacter: Int,

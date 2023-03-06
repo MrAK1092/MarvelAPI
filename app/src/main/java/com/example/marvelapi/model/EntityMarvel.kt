@@ -1,4 +1,4 @@
-package data.model
+package com.example.marvelapi.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

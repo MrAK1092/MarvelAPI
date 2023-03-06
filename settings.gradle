@@ -14,4 +14,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Marvel API"
 include ':app'
-include ':app_v2'

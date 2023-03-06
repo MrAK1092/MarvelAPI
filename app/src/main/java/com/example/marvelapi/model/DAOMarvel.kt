@@ -1,4 +1,4 @@
-package data.model
+package com.example.marvelapi.model
 
 import android.content.ClipData.Item
 import androidx.room.Dao

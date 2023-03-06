@@ -1,4 +1,4 @@
-package data.model
+package com.example.marvelapi.model
 
 class RetrofitService {
     private val retrofit = RetrofitClient.getClient()
